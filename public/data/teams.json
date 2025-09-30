@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "flamengo",
+    "nome": "Flamengo",
+    "cidade": "Rio de Janeiro",
+    "fundacao": 1995,
+    "fotoKey": ["TimeFlamengo", "Flamengo"],
+    "crestKey": ["EscudoFlamengo", "Flamengo-escudo", "Flamengo-logo", "Flamengo"]
+  },
+  {
+    "slug": "santos",
+    "nome": "Santos",
+    "cidade": "Santos",
+    "fundacao": 1997,
+    "fotoKey": ["TimeSantos", "SantosTime"],
+    "crestKey": ["EscudoSantos", "Santos-escudo", "Santos-logo", "Santos"]
+  },
+  {
+    "slug": "palmeiras",
+    "nome": "Palmeiras",
+    "cidade": "São Paulo",
+    "fundacao": 2019,
+    "fotoKey": ["TimePalmeira", "TimePalmeiras", "PalmeirasFeminino"],
+    "crestKey": ["EscudoPalmeiras", "Palmeiras-escudo", "Palmeiras-logo", "Palmeiras"]
+  },
+  {
+    "slug": "corinthians",
+    "nome": "Corinthians",
+    "cidade": "São Paulo",
+    "fundacao": 2016,
+    "fotoKey": ["TimeCorinthians", "CorinthiansTime"],
+    "crestKey": ["EscudoCorinthians", "Corinthians-escudo", "Corinthians-logo"]
+  },
+  {
+    "slug": "sao-paulo",
+    "nome": "São Paulo",
+    "cidade": "São Paulo",
+    "fundacao": 1997,
+    "fotoKey": ["TimeSaoPaulo", "SaoPaulo", "SPFC"],
+    "crestKey": ["EscudoSaoPaulo", "SPFC-escudo", "SaoPaulo-logo"]
+  },
+  {
+    "slug": "cruzeiro",
+    "nome": "Cruzeiro",
+    "cidade": "Belo Horizonte",
+    "fundacao": 2019,
+    "fotoKey": ["TimeCruzeiro", "CruzeiroTime"],
+    "crestKey": ["EscudoCruzeiro", "Cruzeiro-escudo", "Cruzeiro-logo"]
+  }
+]

@@ -1,0 +1,24 @@
+/* App.css pode ser usado para estilos específicos do App */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&display=swap');
+@import "tailwindcss";
+/* Exemplo de estilização do App */
+.App {
+  text-align: center;
+  padding: var(--gap);
+}
+
+.App-header {
+  background-color: var(--panel);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.App-logo {
+  height: 80px;
+}
+
+.App-link {
+  color: var(--purple-strong);
+  font-weight: 700;
+}

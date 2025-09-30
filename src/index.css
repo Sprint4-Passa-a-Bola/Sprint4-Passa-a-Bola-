@@ -1,0 +1,166 @@
+/* Importa fontes */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+/* Suavizar rolagem */
+html { scroll-behavior: smooth; }
+
+/* Variáveis customizadas */
+:root {
+  --purple: #7B3AF5;
+  --purple-strong: #6A2FF0;
+  --yellow: #FADF63;
+  --yellow-soft: #FBEA9C;
+  --ink: #101010;
+  --muted: #6B7280;
+  --line: #E8E8EF;
+  --line2: #F0F0F6;
+  --panel: #fff;
+  --panel-soft: #FBFBFE;
+  --shadow: 0 10px 24px rgba(10,10,20,.06);
+  --radius: 16px;
+  --gap: 20px;
+}
+
+/* Estilos globais */
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: var(--panel-soft);
+  color: var(--ink);
+}
+
+/* Títulos (preto por padrão) */
+h1, h2, h3 { color: #000; }
+
+/* Links padrão */
+a { color: var(--purple); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Botões padrão */
+button {
+  background-color: var(--yellow);
+  color: var(--ink);
+  border-radius: var(--radius);
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+button:hover { background-color: var(--yellow-soft); }
+
+/* Marca do topo */
+.brand-title {
+  font-family: 'Bebas Neue', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+
+/* Só os headers roxos voltam a ser brancos */
+.purple-header h1,
+.purple-header h2,
+.purple-header h3,
+.purple-header p,
+.purple-header span { color: #fff !important; }
+.purple-header .text-black,
+.purple-header .text-gray-500,
+.purple-header .text-gray-600,
+.purple-header .text-gray-700 { color: #fff !important; }
+
+/* ====== BG da página de Login ====== */
+.login-bg {
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(255,255,255,0.08), transparent 60%),
+    radial-gradient(1000px 500px at 110% 110%, rgba(255,255,255,0.06), transparent 60%),
+    linear-gradient(135deg, #7B3AF5 0%, #6A2FF0 100%);
+}
+
+/* Hero do time: título sempre branco */
+.hero-title {
+  color: #fff !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
+}
+
+/* Cartões/painéis genéricos */
+.card,
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+@media (min-width: 768px) {
+  .panel { padding: 32px; }
+}
+
+/* Títulos de seção */
+.section-title {
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-weight: 800;
+  color: var(--ink);
+}
+.sub-title {
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--ink);
+}
+
+/* KPI */
+.kpi-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  text-align: center;
+}
+.kpi-label {
+  font-size: 12px;
+  letter-spacing: .18em;
+  font-weight: 800;
+  color: #6b7280;
+}
+.kpi-value {
+  margin-top: 6px;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 900;
+  color: var(--ink);
+}
+
+/* Badges */
+.badge {
+  display:inline-block;
+  padding: 6px 10px;
+  border-radius: 9999px;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Botão branco com borda */
+.btn-white {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--purple);
+  font-weight: 700;
+}
+.btn-white:hover {
+  background: #fafafa;
+  text-decoration: none;
+}
+
+/* ========= CORREÇÃO DO MENU ========= */
+/* Garante que os links do header nunca fiquem brancos */
+header nav a {
+  color: var(--purple) !important;
+  font-weight: 600;
+}
+header nav a:hover {
+  color: var(--purple-strong) !important;
+}
