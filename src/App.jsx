@@ -3,7 +3,7 @@ import React from "react";
 import { HashRouter as Router, Routes, Route, Link, Navigate, useLocation } from "react-router-dom";
 
 // Páginas
-import Login from "./components/Login"; // <-- está em src/components/Login.jsx
+import Login from "./components/Login";
 import Inicio from "./pages/Inicio";
 import Campeonatos from "./pages/Campeonatos";
 import Times from "./pages/Times";
@@ -23,9 +23,8 @@ function isAuthed() {
   try {
     const a = JSON.parse(localStorage.getItem("auth") || "null");
     if (!a?.ok) return false;
-    // expira em 2 horas (ajuste se quiser)
-    const MAX_AGE_MS = 2 * 60 * 60 * 1000;
-    const fresh = typeof a.ts === "number" && (Date.now() - a.ts) < MAX_AGE_MS;
+    const MAX_AGE_MS = 2 * 60 * 60 * 1000; // 2h
+    const fresh = typeof a.ts === "number" && Date.now() - a.ts < MAX_AGE_MS;
     if (!fresh) {
       localStorage.removeItem("auth");
       return false;
@@ -49,6 +48,14 @@ function RequireAuth({ children }) {
 }
 
 export default function App() {
+  // ✅ força /#/login no primeiro load se não tiver hash e não estiver logado
+  React.useEffect(() => {
+    const noHash = !window.location.hash || window.location.hash === "#";
+    if (noHash && !isAuthed()) {
+      window.location.replace("/#/login");
+    }
+  }, []);
+
   return (
     <Router>
       <div className="min-h-screen flex flex-col bg-gray-50">
@@ -97,7 +104,6 @@ function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
         <Link to="/" className="flex items-center gap-3">
           <img src={logo} alt="Passa a Bola" className="w-20 h-20 object-contain" />
-          <span className="text-2xl font-extrabold text-black">Passa a Bola</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 font-medium text-gray-700">
