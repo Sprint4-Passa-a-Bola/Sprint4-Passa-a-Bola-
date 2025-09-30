@@ -1,9 +1,9 @@
 // src/App.jsx
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link, Navigate, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link, Navigate, useLocation } from "react-router-dom";
 
 // Páginas
-import Login from "./components/Login"; // <-- corrigido: está em src/components/Login.jsx
+import Login from "./components/Login"; // <-- está em src/components/Login.jsx
 import Inicio from "./pages/Inicio";
 import Campeonatos from "./pages/Campeonatos";
 import Times from "./pages/Times";
@@ -38,7 +38,7 @@ function isAuthed() {
 
 function logout() {
   localStorage.removeItem("auth");
-  window.location.replace("/login");
+  window.location.replace("/#/login");
 }
 
 function RequireAuth({ children }) {
