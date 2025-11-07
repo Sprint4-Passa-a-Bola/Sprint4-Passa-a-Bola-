@@ -17,7 +17,7 @@ Além de ser um **projeto acadêmico da FIAP**, o site também é uma **iniciati
 ---
 
 ## 🌍 Links Importantes
-- 🔗 **Deploy (Vercel):** [https://sprint4-passa-a-bola.vercel.app/#/login](https://sprint4-passa-a-bola.vercel.app/#/login)  
+- 🔗 **Deploy (Vercel):** https://sprint4-passa-a-bola.vercel.app/#/login 
 - 🏢 **Repositório:** [GitHub do projeto](https://github.com/Sprint4-Passa-a-Bola/Sprint4-Passa-a-Bola-/tree/main)
 
 ---
@@ -89,5 +89,6 @@ O **Passa a Bola** é mais do que um projeto acadêmico. Ele busca:
 ## 📄 Licença
 Uso **acadêmico e social** — FIAP.  
 Não destinado a uso comercial.
+
 
 
